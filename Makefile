@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+         #
+#    By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 11:27:33 by lidzhang          #+#    #+#              #
-#    Updated: 2023/01/26 11:08:53 by lidzhang         ###   ########.fr        #
+#    Updated: 2023/01/30 00:01:02 by lidanzhang       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,9 +25,19 @@ SOURCE		=	./resource/minilibx_macos/
 LIBFT		=	./libft/libft.a
 LIBFT_PATH	=	./libft
 
-INCLUDE		=	./fdf.h
+INCLUDE		=	./srcs/fdf.h
 
-SRCS		=
+SRCS		=	./srcs/main.c \
+				./srcs/menu.c \
+				./srcs/plot_line.c \
+				./srcs/prg_ctrl_1.c \
+				./srcs/prg_ctrl_2.c \
+				./srcs/read_value.c \
+				./srcs/render_map.c \
+				./srcs/utility1.c \
+				./srcs/utility2.c \
+				./srcs/warning_message.c 
+				
 OBJS		=	$(SRCS:.c=.o)
 
 all : 			$(NAME)
