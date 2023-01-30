@@ -6,7 +6,7 @@
 #    By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 11:27:33 by lidzhang          #+#    #+#              #
-#    Updated: 2023/01/30 00:01:02 by lidanzhang       ###   ########.fr        #
+#    Updated: 2023/01/30 20:34:44 by lidanzhang       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ all : 			$(NAME)
 $(NAME):		$(OBJS)
 				make -C $(SOURCE)
 				make -C $(LIBFT_PATH)
-				$(CC) $(WFLAG) $(MLXLINK) $(MINILIBX) $(INCLUDE) $(LIBFT) $(OPENGL) $^ -o $(NAME)
+				$(CC) $(WFLAG) $(MLXLINK) $(MINILIBX) $(LIBFT) $(OPENGL) $^ -o $(NAME)
 
 clean :
 				make clean -C $(SOURCE)

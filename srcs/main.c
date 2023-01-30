@@ -6,7 +6,7 @@
 /*   By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:32:52 by lidzhang          #+#    #+#             */
-/*   Updated: 2023/01/29 23:30:59 by lidanzhang       ###   ########.fr       */
+/*   Updated: 2023/01/30 22:41:10 by lidanzhang       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static int	initiate_image(int fd, int height, char *argv)
 
 	mlx = malloc(sizeof(t_mlx));
 	if (mlx == NULL)
-		ft_exit("initiate_image error: Unable to malloc.\n");
+		ft_exit("initiate_image error: Unable to malloc.\n\e[0m");
 	mlx->mlx_ptr = mlx_init();
 	mlx->win_ptr = mlx_new_window(mlx->mlx_ptr, G_WIDTH, G_HEIGHT, argv);
 	height = valid_map(fd, height, argv);
@@ -43,7 +43,7 @@ int	main(int argc, char **argv)
 	fd = 0;
 	height = 0;
 	if (argc == 1)
-		ft_exit(YELLOW"Usage: ./fdf resource/maps/test_maps\n");
+		ft_exit(YELLOW"Usage: ./fdf resource/maps/test_maps\n\e[0m");
 	fd = open(argv[1], O_RDONLY);
 	if (fd == -1)
 		exit_no_file(argv[1]);

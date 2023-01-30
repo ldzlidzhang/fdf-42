@@ -6,7 +6,7 @@
 /*   By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/26 11:53:05 by lidzhang          #+#    #+#             */
-/*   Updated: 2023/01/26 21:05:33 by lidanzhang       ###   ########.fr       */
+/*   Updated: 2023/01/30 22:32:27 by lidanzhang       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	navigation_keys(int key, t_mlx *mlx)
 {
 	if (key == ESCAPE_ESC)
-		exit_succuess(GREEN"Window shut down safely.\n");
+		exit_succuess(GREEN"Window shut down safely.\n\e[0m");
 	else if (key == SHIFT_UP || key == SHIFT_DOWN
 		|| key == SHIFT_LEFT || key == SHIFT_RIGHT)
 		shift_window(mlx, key);

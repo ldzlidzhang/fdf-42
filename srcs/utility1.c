@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utility1.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+        */
+/*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 22:32:39 by lidanzhang        #+#    #+#             */
-/*   Updated: 2023/01/29 22:40:04 by lidanzhang       ###   ########.fr       */
+/*   Updated: 2023/01/30 10:30:01 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_width(char **characters)
 {
 	int	width;
 
-	width = ft_wordcount(characters[0], ' ');
+	width = word_count(characters[0], ' ');
 	return (width);
 }
 
@@ -64,34 +64,13 @@ void	print_mlx_data(t_mlx *mlx)
 	{
 		while (j < width)
 		{
-			ft_putnbr(mlx->int_data[i][j]);
-			ft_putstr(" ");
+			ft_putnbr_fd(mlx->int_data[i][j], 1);
+			ft_putstr_fd(" ", 1);
 			j++;
 		}
-		ft_putstr("\n");
+		ft_putstr_fd("\n", 1);
 		j = 0;
 		i++;
 		height--;
 	}
-}
-
-void	get_struct_values(t_mlx *mlx)
-{
-	mlx->x = 0;
-	mlx->y = 0;
-	mlx->x0 = 0;
-	mlx->y0 = 0;
-	mlx->x1 = mlx->x0;
-	mlx->y1 = mlx->y0;
-	mlx->camera = 0;
-	mlx->x_shift = 0;
-	mlx->y_shift = 0;
-	mlx->camera = 0;
-	mlx->degree_angle = 30;
-	mlx->xy_zoom = 0.5;
-	mlx->z_zoom = 0.03;
-	mlx->x_axis = 0;
-	mlx->y_axis = 0;
-	mlx->z_axis = 0;
-	mlx->color = 0xff000;
 }

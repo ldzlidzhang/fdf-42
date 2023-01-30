@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   fdf.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+        */
+/*   By: lidzhang <lidzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 11:32:51 by lidzhang          #+#    #+#             */
-/*   Updated: 2023/01/30 00:07:38 by lidanzhang       ###   ########.fr       */
+/*   Updated: 2023/01/30 10:30:53 by lidzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,7 +123,6 @@ int		ft_abs(int num);
 void	print_mlx_data(t_mlx *mlx);
 void	get_struct_values(t_mlx *mlx);
 void	struct_copy(t_mlx *source, t_mlx *dest);
-void	get_struct_values(t_mlx *mlx);
 void	copy_height_width(t_mlx *mlx, t_mlx *temp);
 void	ft_swap(int *a, int *b);
 
