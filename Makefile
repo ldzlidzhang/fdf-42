@@ -6,13 +6,13 @@
 #    By: lidanzhang <lidanzhang@student.42.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 11:27:33 by lidzhang          #+#    #+#              #
-#    Updated: 2023/01/30 20:34:44 by lidanzhang       ###   ########.fr        #
+#    Updated: 2023/01/31 11:00:45 by lidanzhang       ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	fdf
 
-CC			=	cc
+CC			=	gcc
 WFLAGS		=	-Wall -Wextra -Werror
 OPENGL		=	-lmlx -framework OpenGL -framework AppKit
 
@@ -36,7 +36,10 @@ SRCS		=	./srcs/main.c \
 				./srcs/render_map.c \
 				./srcs/utility1.c \
 				./srcs/utility2.c \
-				./srcs/warning_message.c 
+				./srcs/warning_message.c \
+				./srcs/rotate1.c \
+				./srcs/rotate2.c \
+				./srcs/rotate3.c 
 				
 OBJS		=	$(SRCS:.c=.o)
 
